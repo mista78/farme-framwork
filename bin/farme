@@ -15,10 +15,9 @@ define('LOG_PATH', ROOT_PATH . '/log');
 define('TEMPLATES_PATH', SRC_PATH . '/Template');
 define('CONTROLLERS_PATH', SRC_PATH . '/Controller');
 define('MODELS_PATH', SRC_PATH . '/Model');
-define('CORE_PATH', ROOT_PATH . '/vendor/farme/framework/src/Core');
+define('CORE_PATH', SRC_PATH . '/Core');
 
-// Include framework bootstrap
-require_once ROOT_PATH . '/vendor/farme/framework/src/bootstrap.php';
+require_once SRC_PATH . '/bootstrap.php';
 
 // Boot console application
 farme_boot_console($argv);
