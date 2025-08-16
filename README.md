@@ -144,17 +144,12 @@ All styled with FarmeDynamic CSS utility framework.
 ## Project Structure
 
 ```
-framework/
-├── farme-framework/           # Core framework package
-│   ├── src/Core/             # Framework core components
-│   ├── src/Template/         # UI components & layouts
-│   ├── webroot/assets/       # Framework assets
-│   └── composer.json         # Framework package
-└── farme-project-template/    # Project starter template
-    ├── src/Controller/       # Example controllers
-    ├── src/Template/         # Project templates
-    ├── config/               # Project configuration
-    └── composer.json         # Project dependencies
+farme-framework/           # Core framework package
+│   src/Core/             # Framework core components
+│   src/Template/         # UI components & layouts
+│   webroot/assets/       # Framework assets
+│   composer.json         # Framework package
+
 ```
 
 ## License
