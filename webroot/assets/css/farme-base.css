@@ -1,0 +1,351 @@
+/*!
+ * FarmeBase v1.0.0 - Dynamic CSS Base
+ * Lightweight base for dynamic CSS generation
+ * Only essential styles and CSS variables
+ */
+
+/* ===== CSS RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Primary Colors */
+  --f-primary-50: #eff6ff;
+  --f-primary-100: #dbeafe;
+  --f-primary-200: #bfdbfe;
+  --f-primary-300: #93c5fd;
+  --f-primary-400: #60a5fa;
+  --f-primary-500: #3b82f6;
+  --f-primary-600: #2563eb;
+  --f-primary-700: #1d4ed8;
+  --f-primary-800: #1e40af;
+  --f-primary-900: #1e3a8a;
+  --f-primary-950: #172554;
+
+  /* Secondary Colors */
+  --f-secondary-50: #f8fafc;
+  --f-secondary-100: #f1f5f9;
+  --f-secondary-200: #e2e8f0;
+  --f-secondary-300: #cbd5e1;
+  --f-secondary-400: #94a3b8;
+  --f-secondary-500: #64748b;
+  --f-secondary-600: #475569;
+  --f-secondary-700: #334155;
+  --f-secondary-800: #1e293b;
+  --f-secondary-900: #0f172a;
+  --f-secondary-950: #020617;
+
+  /* Success Colors */
+  --f-success-50: #f0fdf4;
+  --f-success-100: #dcfce7;
+  --f-success-200: #bbf7d0;
+  --f-success-300: #86efac;
+  --f-success-400: #4ade80;
+  --f-success-500: #22c55e;
+  --f-success-600: #16a34a;
+  --f-success-700: #15803d;
+  --f-success-800: #166534;
+  --f-success-900: #14532d;
+  --f-success-950: #052e16;
+
+  /* Warning Colors */
+  --f-warning-50: #fffbeb;
+  --f-warning-100: #fef3c7;
+  --f-warning-200: #fde68a;
+  --f-warning-300: #fcd34d;
+  --f-warning-400: #fbbf24;
+  --f-warning-500: #f59e0b;
+  --f-warning-600: #d97706;
+  --f-warning-700: #b45309;
+  --f-warning-800: #92400e;
+  --f-warning-900: #78350f;
+  --f-warning-950: #451a03;
+
+  /* Error Colors */
+  --f-error-50: #fef2f2;
+  --f-error-100: #fee2e2;
+  --f-error-200: #fecaca;
+  --f-error-300: #fca5a5;
+  --f-error-400: #f87171;
+  --f-error-500: #ef4444;
+  --f-error-600: #dc2626;
+  --f-error-700: #b91c1c;
+  --f-error-800: #991b1b;
+  --f-error-900: #7f1d1d;
+  --f-error-950: #450a0a;
+
+  /* Gray Scale */
+  --f-gray-50: #f9fafb;
+  --f-gray-100: #f3f4f6;
+  --f-gray-200: #e5e7eb;
+  --f-gray-300: #d1d5db;
+  --f-gray-400: #9ca3af;
+  --f-gray-500: #6b7280;
+  --f-gray-600: #4b5563;
+  --f-gray-700: #374151;
+  --f-gray-800: #1f2937;
+  --f-gray-900: #111827;
+  --f-gray-950: #030712;
+
+  /* Blue Colors */
+  --f-blue-50: #eff6ff;
+  --f-blue-100: #dbeafe;
+  --f-blue-200: #bfdbfe;
+  --f-blue-300: #93c5fd;
+  --f-blue-400: #60a5fa;
+  --f-blue-500: #3b82f6;
+  --f-blue-600: #2563eb;
+  --f-blue-700: #1d4ed8;
+  --f-blue-800: #1e40af;
+  --f-blue-900: #1e3a8a;
+
+  /* Red Colors */
+  --f-red-50: #fef2f2;
+  --f-red-100: #fee2e2;
+  --f-red-200: #fecaca;
+  --f-red-300: #fca5a5;
+  --f-red-400: #f87171;
+  --f-red-500: #ef4444;
+  --f-red-600: #dc2626;
+  --f-red-700: #b91c1c;
+  --f-red-800: #991b1b;
+  --f-red-900: #7f1d1d;
+
+  /* Green Colors */
+  --f-green-50: #f0fdf4;
+  --f-green-100: #dcfce7;
+  --f-green-200: #bbf7d0;
+  --f-green-300: #86efac;
+  --f-green-400: #4ade80;
+  --f-green-500: #22c55e;
+  --f-green-600: #16a34a;
+  --f-green-700: #15803d;
+  --f-green-800: #166534;
+  --f-green-900: #14532d;
+
+  /* Purple Colors */
+  --f-purple-50: #faf5ff;
+  --f-purple-100: #f3e8ff;
+  --f-purple-200: #e9d5ff;
+  --f-purple-300: #d8b4fe;
+  --f-purple-400: #c084fc;
+  --f-purple-500: #a855f7;
+  --f-purple-600: #9333ea;
+  --f-purple-700: #7c3aed;
+  --f-purple-800: #6b21a8;
+  --f-purple-900: #581c87;
+
+  /* Pink Colors */
+  --f-pink-50: #fdf2f8;
+  --f-pink-100: #fce7f3;
+  --f-pink-200: #fbcfe8;
+  --f-pink-300: #f9a8d4;
+  --f-pink-400: #f472b6;
+  --f-pink-500: #ec4899;
+  --f-pink-600: #db2777;
+  --f-pink-700: #be185d;
+  --f-pink-800: #9d174d;
+  --f-pink-900: #831843;
+
+  /* Indigo Colors */
+  --f-indigo-50: #eef2ff;
+  --f-indigo-100: #e0e7ff;
+  --f-indigo-200: #c7d2fe;
+  --f-indigo-300: #a5b4fc;
+  --f-indigo-400: #818cf8;
+  --f-indigo-500: #6366f1;
+  --f-indigo-600: #4f46e5;
+  --f-indigo-700: #4338ca;
+  --f-indigo-800: #3730a3;
+  --f-indigo-900: #312e81;
+
+  /* Yellow Colors */
+  --f-yellow-50: #fefce8;
+  --f-yellow-100: #fef9c3;
+  --f-yellow-200: #fef08a;
+  --f-yellow-300: #fde047;
+  --f-yellow-400: #facc15;
+  --f-yellow-500: #eab308;
+  --f-yellow-600: #ca8a04;
+  --f-yellow-700: #a16207;
+  --f-yellow-800: #854d0e;
+  --f-yellow-900: #713f12;
+
+  /* Cyan Colors */
+  --f-cyan-50: #ecfeff;
+  --f-cyan-100: #cffafe;
+  --f-cyan-200: #a5f3fc;
+  --f-cyan-300: #67e8f9;
+  --f-cyan-400: #22d3ee;
+  --f-cyan-500: #06b6d4;
+  --f-cyan-600: #0891b2;
+  --f-cyan-700: #0e7490;
+  --f-cyan-800: #155e75;
+  --f-cyan-900: #164e63;
+
+  /* Teal Colors */
+  --f-teal-50: #f0fdfa;
+  --f-teal-100: #ccfbf1;
+  --f-teal-200: #99f6e4;
+  --f-teal-300: #5eead4;
+  --f-teal-400: #2dd4bf;
+  --f-teal-500: #14b8a6;
+  --f-teal-600: #0d9488;
+  --f-teal-700: #0f766e;
+  --f-teal-800: #115e59;
+  --f-teal-900: #134e4a;
+
+  /* Rose Colors */
+  --f-rose-50: #fff1f2;
+  --f-rose-100: #ffe4e6;
+  --f-rose-200: #fecdd3;
+  --f-rose-300: #fda4af;
+  --f-rose-400: #fb7185;
+  --f-rose-500: #f43f5e;
+  --f-rose-600: #e11d48;
+  --f-rose-700: #be123c;
+  --f-rose-800: #9f1239;
+  --f-rose-900: #881337;
+
+  /* White/Black/Transparent */
+  --f-white: #ffffff;
+  --f-black: #000000;
+  --f-transparent: transparent;
+
+  /* Gradient Variables */
+  --tw-gradient-from: #000;
+  --tw-gradient-to: #000;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+/* ===== ESSENTIAL RESETS ===== */
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button, [type='button'], [type='reset'], [type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol, ul, menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button, [role="button"] {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: default;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* ===== ESSENTIAL ICON SIZING CLASSES ===== */
+/* Common icon sizes - these are used frequently enough to include in base CSS */
+.f-w-3 { width: 0.75rem !important; }
+.f-h-3 { height: 0.75rem !important; }
+.f-w-4 { width: 1rem !important; }
+.f-h-4 { height: 1rem !important; }
+.f-w-5 { width: 1.25rem !important; }
+.f-h-5 { height: 1.25rem !important; }
+.f-w-6 { width: 1.5rem !important; }
+.f-h-6 { height: 1.5rem !important; }
+.f-w-8 { width: 2rem !important; }
+.f-h-8 { height: 2rem !important; }
+.f-w-10 { width: 2.5rem !important; }
+.f-h-10 { height: 2.5rem !important; }
+.f-w-12 { width: 3rem !important; }
+.f-h-12 { height: 3rem !important; }
+.f-w-16 { width: 4rem !important; }
+.f-h-16 { height: 4rem !important; }
+.f-w-20 { width: 5rem !important; }
+.f-h-20 { height: 5rem !important; }
+.f-w-24 { width: 6rem !important; }
+.f-h-24 { height: 6rem !important; }
+
+/* ===== DYNAMIC CSS PLACEHOLDER ===== */
+/* Dynamic styles will be injected here by FarmeDynamic */

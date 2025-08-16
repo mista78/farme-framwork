@@ -1,0 +1,26 @@
+{
+    "name": "farme/framework",
+    "description": "The Farme PHP Framework - Built with procedural simplicity",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["framework", "php", "procedural", "micro", "web"],
+    "homepage": "https://github.com/farme/framework",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "files": [
+            "src/bootstrap.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
