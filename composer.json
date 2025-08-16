@@ -4,7 +4,7 @@
     "type": "library",
     "license": "MIT",
     "keywords": ["framework", "php", "procedural", "micro", "web"],
-    "homepage": "https://github.com/farme/framework",
+    "homepage": "https://github.com/mista78/farme-framwork",
     "require": {
         "php": ">=8.0"
     },
